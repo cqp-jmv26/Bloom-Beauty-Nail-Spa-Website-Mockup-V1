@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erika Nails Spa — Clinical Pedicure &amp; Nail Care | Pedicura Clínica</title>
+<meta name="description" content="Licensed manicurist and clinical pedicure specialist. Healthier feet, renewed confidence. Book online. | Pedicura clínica y uñas acrílicas. Reserva en línea.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FDFBFA; --surface:#F6E7EA; --text:#2B2B33; --muted:#6E6470;
+  --accent:#79B8D1; --accent-text:#2E7A99; --rose:#D89AA6; --rose-soft:#EED1D6;
+  --r-pill:999px; --r-card:24px; --r-img:32px; --r-input:12px;
+  --shadow:0 8px 30px rgba(216,154,166,.18);
+  --fd:"Fraunces",serif; --fb:"Nunito Sans",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);font-size:1rem;line-height:1.65}
+.container{max-width:1100px;margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem)}
+h1,h2,.display{font-family:var(--fd);font-weight:700}
+.display{font-size:clamp(2.5rem,6vw,4rem);line-height:1.05}
+h2{font-size:clamp(1.5rem,3vw,2rem);line-height:1.15;font-weight:600}
+h3{font-size:1.25rem;line-height:1.3;font-weight:700}
+.es-line{font-family:var(--fd);font-style:italic;font-weight:600;color:var(--accent-text)}
+.muted{color:var(--muted)}
+section{padding-block:clamp(3.5rem,8vw,6rem)}
+.alt{background:var(--surface)}
+.divider{width:120px;border:0;border-top:1.5px solid var(--rose);margin:0 0 1.5rem}
+/* butterfly glyph */
+.bfly{width:22px;height:22px;flex:none}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(253,251,250,.92);backdrop-filter:blur(8px);border-bottom:1.5px solid var(--rose-soft)}
+.nav-in{display:flex;align-items:center;gap:1.25rem;padding-block:.7rem}
+.nav-logo{display:flex;align-items:center;gap:.6rem;font-family:var(--fd);font-weight:700;font-size:1.15rem;text-decoration:none;color:var(--text)}
+.nav-logo img{width:44px;height:44px;border-radius:14px;object-fit:cover}
+.nav-links{display:none;gap:1.5rem;margin-left:auto}
+.nav-links a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem}
+.nav-links a:hover{color:var(--accent-text)}
+.lang{margin-left:auto;display:flex;border:1.5px solid var(--rose);border-radius:var(--r-pill);overflow:hidden}
+.lang button{border:0;background:transparent;font:600 .85rem var(--fb);padding:.4rem .85rem;cursor:pointer;color:var(--muted)}
+.lang button.on{background:var(--rose-soft);color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:.55rem;font:600 1rem/1 var(--fb);letter-spacing:.01em;padding:.95rem 2rem;border-radius:var(--r-pill);text-decoration:none;transition:transform .2s ease-out,box-shadow .2s ease-out;border:0;cursor:pointer}
+.btn-book{background:var(--accent);color:var(--text)}
+.btn-book:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+.btn-ghost{background:transparent;border:1.5px solid var(--rose);color:var(--text)}
+.btn-nav{padding:.6rem 1.3rem;font-size:.9rem}
+@media(min-width:820px){.nav-links{display:flex}.lang{margin-left:0}}
+/* hero */
+.hero{padding-block:clamp(3rem,7vw,5.5rem)}
+.hero-grid{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:820px){.hero-grid{grid-template-columns:1.4fr 1fr}}
+.badge{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1.5px solid var(--rose);border-radius:var(--r-pill);padding:.45rem 1.1rem;font-size:.85rem;font-weight:700;margin-bottom:1.4rem}
+.hero p.lead{font-size:1.1rem;max-width:52ch;margin-block:1.25rem 2rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+.hero-note{font-size:.875rem;color:var(--muted);margin-top:1rem}
+.logo-card{background:var(--surface);border-radius:var(--r-img);padding:2.5rem;display:flex;flex-direction:column;align-items:center;gap:1.25rem;box-shadow:var(--shadow)}
+.logo-card img{width:min(220px,70%);border-radius:20px}
+.logo-card p{font-size:.9rem;color:var(--muted);text-align:center;max-width:26ch}
+/* services */
+.cards{display:grid;gap:1.25rem;margin-top:2.25rem}
+@media(min-width:720px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border-radius:var(--r-card);padding:1.75rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.8rem}
+.alt .card{background:var(--bg)}
+.card .es{font-size:.95rem;color:var(--accent-text);font-weight:600}
+.card p{font-size:.95rem;color:var(--muted)}
+.card .price{margin-top:auto;font-weight:700;font-size:.9rem}
+/* why */
+.why-grid{display:grid;gap:1.25rem;margin-top:2.25rem}
+@media(min-width:720px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+.why{display:flex;gap:.9rem;align-items:flex-start}
+.why h3{font-size:1.05rem}
+.why p{font-size:.92rem;color:var(--muted)}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.25rem}
+@media(min-width:720px){.gal{grid-template-columns:repeat(4,1fr)}}
+.gal div{aspect-ratio:1;border-radius:var(--r-card);background:linear-gradient(160deg,var(--rose-soft),var(--surface));display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.8rem;font-weight:600;text-align:center;padding:1rem}
+/* booking steps */
+.steps{display:grid;gap:1.25rem;margin:2.25rem 0}
+@media(min-width:720px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:#fff;border-radius:var(--r-card);padding:1.5rem;box-shadow:var(--shadow)}
+.step span{display:inline-flex;width:36px;height:36px;border-radius:50%;background:var(--accent);color:var(--text);font-weight:700;align-items:center;justify-content:center;margin-bottom:.75rem}
+.step p{font-size:.92rem;color:var(--muted)}
+/* contact */
+.contact-grid{display:grid;gap:2rem;margin-top:2.25rem}
+@media(min-width:820px){.contact-grid{grid-template-columns:1fr 1fr}}
+.hours{width:100%;border-collapse:collapse;font-size:.95rem}
+.hours td{padding:.5rem 0;border-bottom:1.5px solid var(--rose-soft)}
+.hours td:last-child{text-align:right;font-weight:600}
+.social a{color:var(--accent-text);font-weight:700;text-decoration:none}
+footer{background:var(--text);color:var(--rose-soft);padding-block:2.5rem;font-size:.9rem}
+.foot-in{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+footer a{color:#fff;text-decoration:none;font-weight:600}
+/* bilingual toggle: both rendered, .es-hide / .en-hide switch */
+html[data-lang="en"] [data-es]{display:none}
+html[data-lang="es"] [data-en]{display:none}
+/* scroll entry */
+.rise{opacity:0;transform:translateY(8px);transition:opacity .25s cubic-bezier(.22,.61,.36,1),transform .25s cubic-bezier(.22,.61,.36,1)}
+.rise.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rise{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+:focus-visible{outline:3px solid var(--accent-text);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs><symbol id="butterfly" viewBox="0 0 24 24">
+<path d="M12 6c-1.8-3.2-5.4-4.6-8-3.4-1.6.8-1.9 3.5-.6 5.9 1 1.9 2.9 3.2 4.8 3.5-1.9.5-3.5 2-4.2 3.9-.8 2.3 0 4.6 1.6 5 2.4.6 5.2-1.5 6.4-4.5 1.2 3 4 5.1 6.4 4.5 1.6-.4 2.4-2.7 1.6-5-.7-1.9-2.3-3.4-4.2-3.9 1.9-.3 3.8-1.6 4.8-3.5 1.3-2.4 1-5.1-.6-5.9-2.6-1.2-6.2.2-8 3.4z" fill="#79B8D1"/>
+<line x1="12" y1="5.5" x2="12" y2="20" stroke="#2B2B33" stroke-width="1.4" stroke-linecap="round"/>
+</symbol></defs>
+</svg>
+
+<nav>
+  <div class="container nav-in">
+    <a class="nav-logo" href="#top"><img src="logo.jpg" alt="Erika Nails Spa logo"><span>Erika <span style="font-weight:400;font-size:.8em;letter-spacing:.12em">NAILS SPA</span></span></a>
+    <div class="nav-links">
+      <a href="#services" data-en>Services</a><a href="#services" data-es>Servicios</a>
+      <a href="#about" data-en>Why Erika</a><a href="#about" data-es>Por qué Erika</a>
+      <a href="#gallery" data-en>Gallery</a><a href="#gallery" data-es>Galería</a>
+      <a href="#contact" data-en>Contact</a><a href="#contact" data-es>Contacto</a>
+    </div>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button id="btn-en" class="on" onclick="setLang('en')">EN</button>
+      <button id="btn-es" onclick="setLang('es')">ES</button>
+    </div>
+    <a class="btn btn-book btn-nav" href="#book"><span data-en>Book now</span><span data-es>Reservar</span></a>
+  </div>
+</nav>
+
+<header class="hero container" id="top">
+  <div class="hero-grid">
+    <div class="rise in">
+      <span class="badge"><svg class="bfly" aria-hidden="true"><use href="#butterfly"/></svg>
+        <span data-en>Licensed Manicurist · Clinical Pedicure Specialist</span>
+        <span data-es>Manicurista Licenciada · Técnica en Pedicura Clínica</span>
+      </span>
+      <h1 class="display">
+        <span data-en>Healthier feet.<br>Renewed confidence.</span>
+        <span data-es>Pies más sanos.<br>Confianza renovada.</span>
+      </h1>
+      <p class="es-line" style="margin-top:.75rem">
+        <span data-en>Tus pies también merecen cuidado experto.</span>
+        <span data-es>Your feet deserve expert care, too.</span>
+      </p>
+      <p class="lead">
+        <span data-en>Seven years of specialized nail and foot care — acrylic artistry, spa pedicures, and clinical treatments that most salons can't offer. Every visit is personal, unhurried, and bilingual.</span>
+        <span data-es>Siete años de cuidado especializado de uñas y pies — arte en acrílico, pedicura spa y tratamientos clínicos que la mayoría de los salones no ofrecen. Cada visita es personal, sin prisas y bilingüe.</span>
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-book" href="#book"><span data-en>Book your appointment</span><span data-es>Reserva tu cita</span> →</a>
+        <a class="btn btn-ghost" href="#services"><span data-en>See services</span><span data-es>Ver servicios</span></a>
+      </div>
+      <p class="hero-note"><span data-en>Se habla español · Booking takes under 2 minutes</span><span data-es>English spoken · Reservar toma menos de 2 minutos</span></p>
+    </div>
+    <div class="logo-card rise in">
+      <img src="logo.jpg" alt="Erika Nails Spa — script wordmark with blue butterfly">
+      <p><span data-en>Follow the work · @erikanailsandspa</span><span data-es>Mira el trabajo · @erikanailsandspa</span></p>
+    </div>
+  </div>
+</header>
+
+<section class="alt" id="services">
+  <div class="container">
+    <hr class="divider">
+    <h2 class="rise"><span data-en>Services built on foot health</span><span data-es>Servicios basados en la salud de tus pies</span></h2>
+    <div class="cards">
+      <div class="card rise">
+        <svg class="bfly" aria-hidden="true"><use href="#butterfly"/></svg>
+        <h3 data-en>Clinical pedicure</h3><h3 data-es>Pedicura clínica</h3>
+        <p class="es"><span data-en>Pedicura clínica</span><span data-es>Clinical pedicure</span></p>
+        <p><span data-en>Specialized treatment for calluses, ingrown nails, and problem feet — the credentialed care that sets this studio apart.</span><span data-es>Tratamiento especializado para callosidades, uñas encarnadas y pies con problemas — el cuidado certificado que distingue a este estudio.</span></p>
+        <p class="price"><span data-en>From $55 · 60 min</span><span data-es>Desde $55 · 60 min</span></p>
+      </div>
+      <div class="card rise">
+        <svg class="bfly" aria-hidden="true"><use href="#butterfly"/></svg>
+        <h3 data-en>Acrylic nails &amp; design</h3><h3 data-es>Uñas acrílicas y diseño</h3>
+        <p class="es"><span data-en>Uñas acrílicas</span><span data-es>Acrylic artistry</span></p>
+        <p><span data-en>Full sets, fills, and hand-painted designs shaped to your style — durable, clean, and photographed for the gallery you see on Instagram.</span><span data-es>Sets completos, rellenos y diseños pintados a mano según tu estilo — duraderos, limpios y fotografiados para la galería que ves en Instagram.</span></p>
+        <p class="price"><span data-en>From $45 · 75 min</span><span data-es>Desde $45 · 75 min</span></p>
+      </div>
+      <div class="card rise">
+        <svg class="bfly" aria-hidden="true"><use href="#butterfly"/></svg>
+        <h3 data-en>Spa pedicure &amp; manicure</h3><h3 data-es>Pedicura spa y manicura</h3>
+        <p class="es"><span data-en>Pedicura spa</span><span data-es>Spa ritual</span></p>
+        <p><span data-en>Warm soak, exfoliation, massage, and polish — a restorative ritual for regular care between clinical visits.</span><span data-es>Baño tibio, exfoliación, masaje y esmalte — un ritual restaurador para el cuidado regular entre visitas clínicas.</span></p>
+        <p class="price"><span data-en>From $35 · 45 min</span><span data-es>Desde $35 · 45 min</span></p>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:1.5rem;font-size:.85rem"><span data-en>Sample pricing for mockup — final menu to be confirmed with Erika.</span><span data-es>Precios de muestra para la maqueta — el menú final se confirmará con Erika.</span></p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <hr class="divider">
+    <h2 class="rise"><span data-en>Not the assembly-line salon</span><span data-es>No somos un salón en serie</span></h2>
+    <div class="why-grid">
+      <div class="why rise"><svg class="bfly" aria-hidden="true"><use href="#butterfly"/></svg><div>
+        <h3><span data-en>Licensed &amp; clinical</span><span data-es>Licenciada y clínica</span></h3>
+        <p><span data-en>Certified manicurist with clinical pedicure training — your foot health comes before the polish.</span><span data-es>Manicurista certificada con formación en pedicura clínica — la salud de tus pies va antes que el esmalte.</span></p>
+      </div></div>
+      <div class="why rise"><svg class="bfly" aria-hidden="true"><use href="#butterfly"/></svg><div>
+        <h3><span data-en>Seven years of care</span><span data-es>Siete años de cuidado</span></h3>
+        <p><span data-en>Loyal clients built by word of mouth. Erika remembers your history, preferences, and goals.</span><span data-es>Clientas fieles gracias a las recomendaciones. Erika recuerda tu historial, preferencias y metas.</span></p>
+      </div></div>
+      <div class="why rise"><svg class="bfly" aria-hidden="true"><use href="#butterfly"/></svg><div>
+        <h3><span data-en>Bilingual, personal</span><span data-es>Bilingüe y personal</span></h3>
+        <p><span data-en>English and Spanish, one expert, unhurried appointments. You're a person here, not a ticket.</span><span data-es>Inglés y español, una sola experta, citas sin prisa. Aquí eres una persona, no un turno.</span></p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="gallery">
+  <div class="container">
+    <hr class="divider">
+    <h2 class="rise"><span data-en>Recent work</span><span data-es>Trabajos recientes</span></h2>
+    <p class="muted" style="margin-top:.75rem"><span data-en>Placeholder tiles — final site pulls photos from @erikanailsandspa.</span><span data-es>Mosaicos de muestra — el sitio final usará fotos de @erikanailsandspa.</span></p>
+    <div class="gal rise">
+      <div data-en>Acrylic set photo</div><div data-es>Foto set acrílico</div>
+      <div data-en>Clinical pedicure before/after</div><div data-es>Pedicura clínica antes/después</div>
+      <div data-en>Nail art detail</div><div data-es>Detalle de arte</div>
+      <div data-en>Studio &amp; spa chair</div><div data-es>Estudio y sillón spa</div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="container" style="text-align:center;max-width:820px">
+    <hr class="divider" style="margin-inline:auto">
+    <h2 class="rise"><span data-en>Book in under two minutes</span><span data-es>Reserva en menos de dos minutos</span></h2>
+    <div class="steps" style="text-align:left">
+      <div class="step rise"><span>1</span><h3 data-en>Choose a service</h3><h3 data-es>Elige un servicio</h3><p><span data-en>Pick from the menu — clinical, acrylic, or spa.</span><span data-es>Escoge del menú — clínica, acrílico o spa.</span></p></div>
+      <div class="step rise"><span>2</span><h3 data-en>Pick your time</h3><h3 data-es>Elige tu horario</h3><p><span data-en>See real-time availability, day or night.</span><span data-es>Consulta la disponibilidad en tiempo real, a cualquier hora.</span></p></div>
+      <div class="step rise"><span>3</span><h3 data-en>Confirm &amp; relax</h3><h3 data-es>Confirma y relájate</h3><p><span data-en>A card holds your spot; reminders come automatically.</span><span data-es>Tu tarjeta aparta el lugar; los recordatorios llegan solos.</span></p></div>
+    </div>
+    <a class="btn btn-book rise" style="font-size:1.1rem;padding:1.1rem 2.6rem" href="https://squareup.com/appointments" target="_blank" rel="noopener">
+      <span data-en>Book on Square</span><span data-es>Reservar en Square</span> →</a>
+    <p class="muted" style="margin-top:1rem;font-size:.85rem"><span data-en>Mockup link — connects to Erika's Square Appointments page at launch.</span><span data-es>Enlace de maqueta — se conectará a la página de Square de Erika al lanzar.</span></p>
+  </div>
+</section>
+
+<section class="alt" id="contact">
+  <div class="container">
+    <hr class="divider">
+    <h2 class="rise"><span data-en>Visit the studio</span><span data-es>Visita el estudio</span></h2>
+    <div class="contact-grid">
+      <div class="rise">
+        <h3 data-en>Hours</h3><h3 data-es>Horario</h3>
+        <table class="hours" style="margin-top:1rem">
+          <tr><td data-en>Tuesday – Friday</td><td data-es>Martes – Viernes</td><td>9:00 – 18:00</td></tr>
+          <tr><td data-en>Saturday</td><td data-es>Sábado</td><td>9:00 – 15:00</td></tr>
+          <tr><td data-en>Sunday – Monday</td><td data-es>Domingo – Lunes</td><td data-en>By appointment</td><td data-es>Con cita</td></tr>
+        </table>
+      </div>
+      <div class="rise social">
+        <h3 data-en>Find us</h3><h3 data-es>Encuéntranos</h3>
+        <p style="margin-top:1rem"><span data-en>Address and phone to be added at launch.</span><span data-es>Dirección y teléfono se agregarán al lanzar.</span></p>
+        <p style="margin-top:.75rem">Instagram: <a href="https://instagram.com/erikanailsandspa" target="_blank" rel="noopener">@erikanailsandspa</a></p>
+        <p style="margin-top:.35rem"><span data-en>Facebook: Erika Nails Spa</span><span data-es>Facebook: Erika Nails Spa</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container foot-in">
+    <p>© 2026 Erika Nails Spa · <span data-en>Licensed Manicurist &amp; Pedicurista</span><span data-es>Manicurista y Pedicurista Licenciada</span></p>
+    <p><a href="#book" data-en>Book now</a><a href="#book" data-es>Reservar</a> · <a href="https://instagram.com/erikanailsandspa" target="_blank" rel="noopener">Instagram</a></p>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.documentElement.setAttribute('data-lang',l);
+  document.documentElement.lang=l;
+  document.getElementById('btn-en').classList.toggle('on',l==='en');
+  document.getElementById('btn-es').classList.toggle('on',l==='es');
+}
+setLang('en');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});
+document.querySelectorAll('.rise').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
